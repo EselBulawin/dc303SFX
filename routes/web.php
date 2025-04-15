@@ -20,6 +20,22 @@ Route::get('/investors', [InvestorController::class, 'index'])->name('investors.
 Route::get('/investors/create', [InvestorController::class, 'create'])->name('investors.create');
 Route::post('/investors', [InvestorController::class, 'store'])->name('investors.store');
 
+Route::get('/investors/page2', function () {
+    return Inertia::render('Investor/Page2');
+})->name('investors.page2');
+
+Route::get('/investors/page3', function () {
+    return Inertia::render('Investor/Page3');
+})->name('investors.page3');
+
+Route::get('/investors/page4', function () {
+    return Inertia::render('Investor/Page4');
+})->name('investors.page4');
+
+Route::get('/investors/page5', function () {
+    return Inertia::render('Investor/Page5');
+})->name('investors.page5');
+
 Route::get('/about', function() {
     return inertia('About');
 });
