@@ -35,14 +35,14 @@ function goToPage(page) {
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white">
       <div v-for="investor in investors" :key="investor.id" class="border rounded-lg p-4 shadow hover:shadow-lg transition">
-        <h2 class="text-lg font-semibold">{{ investor.last_name }}, {{ investor.first_name }}</h2>
+        <h2 class="text-lg font-semibold text-white">{{ investor.last_name }}, {{ investor.first_name }}</h2>
         <p><strong>Phone:</strong> {{ investor.phone }}</p>
         <p><strong>Address:</strong> {{ investor.address }}</p>
         <p><strong>Investment Type:</strong> {{ investor.investment_type }}</p>
       </div>
     </div>
 
-    <div class="flex justify-center mt-6 space-x-2">
+    <div class="flex justify-center mt-6 space-x-2 text-white">
       <button
         class="px-3 py-1 border rounded disabled:opacity-50"
         :disabled="pagination.current_page === 1"
